@@ -17,4 +17,6 @@ composer install
 
 service apache2 start
 
+php /var/www/vendor/bin/phinx migrate
+
 tail -f /var/log/apache2/access.log
