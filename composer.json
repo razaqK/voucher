@@ -1,0 +1,16 @@
+{
+  "name": "voucher",
+  "description": "Voucher API",
+  "require": {
+    "php": ">=7.2",
+    "wixel/gump": "dev-master",
+    "robmorgan/phinx": "^0.5.3",
+    "nesbot/carbon": "^1.22",
+    "zircote/swagger-php": "^2.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.4",
+    "codegyre/robo": "*",
+    "phalcon/devtools": "3.1.2"
+  }
+}

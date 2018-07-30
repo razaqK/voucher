@@ -1,0 +1,25 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - Asserts
+        - \Helper\Unit
+        - Phalcon1:
+            bootstrap: 'tests/config/bootstrap.php'
+        - Db
+        - \Helper\Unit
+        - PhpBrowser
+        - REST
+    config:
+      Db:
+        dsn: 'mysql:host=vmysql;port=3306;dbname=voucher'
+        user: 'root'
+        password: 'root'
+        dump: tests/_data/dump.sql
+        populate: true
+        cleanup: false
+        reconnect: true
+      PhpBrowser:
+        url: http://127.0.0.1
+      REST:
+        depends: PhpBrowser
+        url: http://127.0.0.1

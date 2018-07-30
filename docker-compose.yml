@@ -1,0 +1,31 @@
+version: '3'
+services:
+  voucher:
+      build: .
+      container_name: voucher
+      ports:
+           - 100:80
+
+      # Set the default environment variables when we run it via compose.
+      env_file:
+          - ./.env
+
+      # Map the exposed folder volumes to the directories within our repos.
+      volumes:
+          - ./:/var/www
+          - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      depends_on:
+          - mysql
+
+  mysql:
+      image: mysql:5.7
+      container_name: vmysql
+      environment:
+          # with mysql
+          MYSQL_DATABASE: voucher
+          MYSQL_USER: root
+          MYSQL_ROOT_PASSWORD: root
+      volumes:
+          - ./docker/data/mysql:/var/lib/mysql
+      ports:
+          - "3309:3306"

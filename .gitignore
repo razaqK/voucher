@@ -1,0 +1,15 @@
+atlassian-ide-plugin.xml
+.idea/
+app/build/logs/
+cache.properties
+app/logs/
+app/cache
+.DS_Store
+composer.phar
+composer.lock
+codecept.phar
+vendor/
+
+tests/dump.rdb
+
+/docker/xdebug.ini
