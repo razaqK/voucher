@@ -13,6 +13,9 @@
 ### API Documentation
 Check the api documentation [here](https://documenter.getpostman.com/view/1419985/RWMLL6Gs)
 
+### Database Schema
+![alt database schema](https://raw.githubusercontent.com/razaqk/voucher/master/app/docs/voucher.png)
+
 ### Development on your local machine
 
 #### Set your Application Environment
