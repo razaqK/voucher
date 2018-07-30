@@ -15,8 +15,6 @@ touch /var/log/apache2/access.log
 
 composer install
 
-php vendor/bin/codecept run api
-
 service apache2 start
 
 tail -f /var/log/apache2/access.log

@@ -13,3 +13,4 @@ vendor/
 tests/dump.rdb
 
 /docker/xdebug.ini
+/docker/data
